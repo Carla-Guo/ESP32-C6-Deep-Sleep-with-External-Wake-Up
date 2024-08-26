@@ -81,4 +81,7 @@ esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
  */
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t io_mask, esp_sleep_ext1_wakeup_mode_t level_mode);
 ```
-```
+We can observe that there are two types for ESP32 external wake up—ext0 and ext1—in the description of esp_sleep.h. It is noted that ext0 does not support ESP32C6, thus ext1 should be used instead.
+
+💁: The "ESP32's GPIO which have RTC functionality", where the ESP32 is not a reference to the ESP32 series, but rather to the originally released ESP32 chip
+
